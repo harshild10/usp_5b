@@ -1,0 +1,7 @@
+echo "power of a number"
+echo "enter a number"
+read a
+echo "enter the power"
+read b
+ans=`echo $a ^ $b |bc`
+echo $a to the power $b = $ans
