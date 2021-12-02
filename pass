@@ -1,0 +1,30 @@
+echo "enter marks for sub1:"
+read a
+echo "enter marks for sub2:"
+read b
+echo "enter marks for sub3:"
+read c
+echo "enter marks for sub4:"
+read d
+echo "enter marks for sub5:"
+read e
+total=`echo $a+$b+$c+$d+$e |bc`
+avg=`expr $total / 5`
+if [ $avg -gt 90 ]
+then
+echo " S grade"   
+elif [ $avg -gt 80 -a $avg -lt 91 ]
+then
+echo " A grade"
+ 
+elif [ $avg -gt 70 -a $avg -lt 81 ]
+then
+echo " B grade"
+ 
+elif [ $avg -gt 60 -a $avg -lt 71 ]
+then
+echo " c grade"
+elif [$avg -lt 40 ]
+then
+echo "fail"
+fi
